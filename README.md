@@ -13,7 +13,7 @@ SUAI conference automation scripts
 - Приказ о проведении: http://fs.guap.ru/docs/2018/pr_guap_2018-005-28_05-139-18.pdf
 - Пример заполненной формы представления материалов для программы 72-й МСНК ГУАП: https://docs.google.com/document/d/12QSuZgxSY40YRi2Eu5I5scfobLDzEPoOitMiIH-bsqg/edit?usp=sharing
 - Пример заполненного отчета конференции: https://docs.google.com/document/d/1Q7KXTWOZm_qa-4k3IHK5LIQNmQeOW1JXoN9BONUmAyo/edit?usp=sharing
-- Пример списка представляемых к публикации докладов: https://docs.google.com/document/d/12QSuZgxSY40YRi2Eu5I5scfobLDzEPoOitMiIH-bsqg/edit?usp=sharing
+- Пример списка представляемых к публикации докладов: https://docs.google.com/document/d/1CK-jHP1xHWp6BtpnjrxG1qPrrIAlQiPZvgTpo1D6pmU/edit?usp=sharing
 - Внутренняя таблица для учета всех этапов организации конференции (доступ по запросу): https://docs.google.com/spreadsheets/d/1zkLdYvq8qjKB4pOM6h8OwDPHahfrH9n8_GOUtySW-p0/edit?usp=sharing
 
 ### Этапы проведения конференции
