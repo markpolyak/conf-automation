@@ -76,7 +76,7 @@ for i in range (2, q+2):
         row = sheet.row_values(i)
 
         try:
-            if(row[10] == '1' and row[11] == '1'):
+            if((row[10] == '1' or row[10] == 'Да') and (row[11] == '1' or row[11] == 'Да')):
                 s = str(k) + '.\t' + row[0] + " " + row[1][0] + ". " + row[2][0] + ". " + row[12]
                 document.add_paragraph('\t'+s)
                 k=k+1
