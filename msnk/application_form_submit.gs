@@ -12,8 +12,10 @@ function onSubmitForm(e){
   endFun = check(itemResponses, emailAddress, sheet, row); 
   
   if (endFun == 0) {Logger.log("Function error")}
-  else if (endFun == 1) {Logger.log("Response has been updated")}
-  else if (endFun == 2) {Logger.log("Response added")};
+  else if (endFun == 1) {Logger.log("Response has been updated");
+                        e.source.setConfirmationMessage ('Ваш ответ уже существует, он был обновлен.');}
+  else if (endFun == 2) {Logger.log("Response added");
+                        e.source.setConfirmationMessage ('Ответ был добавлен.');};
   
 }
 
@@ -26,7 +28,7 @@ function addInTable(itemResponses, emailAddress, sheet, row) {
     var response = itemResponses[i].getResponse();
     sheet.getRange(row, i+2).setValue(response);
   }
-  //Add the date of the response
+  //Add the date and email of the response
   sheet.getRange(row, 1).setValue(emailAddress);
   sheet.getRange(row, i+2).setValue(dateString);
 }
@@ -36,23 +38,23 @@ function addInTable(itemResponses, emailAddress, sheet, row) {
 function check(itemResponses, emailAddress, sheet, row) {
   Logger.log("Check run");
   
-  var surnameResponse = itemResponses[1].getResponse(); 
+  var surnameResponse = itemResponses[0].getResponse(); 
   Logger.log("surnameResponse = " + surnameResponse);
   for (var i = 2; i <= row; i++) {
     var check = sheet.getRange(i, 2).getValue();
     if (surnameResponse == check) {
-      var nameResponse = itemResponses[2].getResponse(); 
+      var nameResponse = itemResponses[1].getResponse(); 
       Logger.log("nameResponse = " + nameResponse);
       var check = sheet.getRange(i, 3).getValue();
       if (nameResponse == check) {
-        var patronymicResponse = itemResponses[3].getResponse();
+        var patronymicResponse = itemResponses[2].getResponse();
         Logger.log("patronymicResponse = " + patronymicResponse);
         var check = sheet.getRange(i, 4).getValue();
         if (patronymicResponse == check) {
-          var instituteResponse = itemResponses[6].getResponse();
+          var instituteResponse = itemResponses[5].getResponse();
           Logger.log("instituteResponse = " + instituteResponse);
           if (instituteResponse == "ГУАП") {
-            var groupResponse = itemResponses[7].getResponse();
+            var groupResponse = itemResponses[6].getResponse();
             Logger.log("groupResponse = " + groupResponse);
             var check = sheet.getRange(i, 8).getValue();
             if (groupResponse == check) {
